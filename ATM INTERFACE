@@ -1,0 +1,57 @@
+import java.util.*;
+class atminterface
+{
+	public static void main(String args[])
+	{
+		int userID1=34567;
+		String password1="MyAtm123";
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter userID:");
+		int userID2=s.nextInt();
+		System.out.println("Enter password:");
+		String password2=s.next();
+		
+		if(userID1==userID2 && password1.equals(password2))
+		{
+			System.out.println("Successfully LogIn.");
+			System.out.println("***** ATM INTERFACE *****");
+			int balance=50000,withdraw;
+			while(true)
+			{
+				System.out.println("1.Check Balance");
+				System.out.println("2.Withdraw money");
+				System.out.println("Please enter your choice:");
+				int ch=s.nextInt();
+				
+				switch(ch)
+				{
+					case 1:
+						System.out.println("Available Balance:"+balance);
+						break;
+				
+					case 2:
+						System.out.println("Plese enter amount to be withdraw:");
+						withdraw=s.nextInt();
+
+						if(balance>=withdraw)
+						{
+							balance=balance-withdraw;
+							System.out.println("Money successfully withdrawed.Please collect your cash!!!");
+						}
+						else
+						{
+							System.out.println("Not enough balance.");
+						}
+						break;
+					
+					default:
+						System.out.println("Please enter valid choice !!!");
+			        }
+			}
+		}
+		else 
+		{
+			System.out.println("Please enter valid details.");
+		}
+	}
+}
