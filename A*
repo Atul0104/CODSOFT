@@ -53,3 +53,17 @@ int uni(int i, int j) {
     }
     return 0;
 }
+Theory: 
+⚫ Kruskal's algorithm to find the minimum cost spanning tree uses the greedy approach. 
+⚫ This algorithm treats the graph as a forest and every node it has as an individual tree. 
+⚫  A tree connects to another only and only if, it has the least cost among all available options and does not 
+violate MST properties 
+Algorithm: 
+⚫ Kruskal’s Algorithm is a famous greedy algorithm. 
+⚫ It is used for finding the Minimum Spanning Tree (MST) of a given graph. 
+⚫ To apply Kruskal’s algorithm, the given graph must be weighted, connected and undirected. 
+Steps: 
+⚫ Sort all the edges from low weight to high weight. 
+⚫ Take the edge with the lowest weight and use it to connect the vertices of graph. 
+⚫ If adding an edge creates a cycle, then reject that edge and go for the next least weight edge. 
+⚫ Keep adding edges until all the vertices are connected and a Minimum Spanning Tree (MST) is obtained.
